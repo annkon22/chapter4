@@ -237,6 +237,7 @@ def search_from(maze,start_row, start_column):
     if maze.is_exit(start_row,start_column):
         maze.update_position(start_row, start_column, PART_OF_PATH)
         return True
+    maze.update_position(start_row, start_column, TRIED)
 
         #Otherwise, use logical shortcircuiting to try each direction
         #in turn (if needed)
