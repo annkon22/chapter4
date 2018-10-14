@@ -252,6 +252,19 @@ def search_from(maze,start_row, start_column):
     else:
         maze.update_position(start_row, start_column, DEAD_END)
     return found
+file = open('maze2.txt', 'w+')
+file.write("""++++++++++++++++++++++
++  +  ++ ++           
++            +++++++ +
++ +   ++ ++++ +++ ++ +
++ + +   ++  +++ +    +
++     +    ++ + +    +
++++++ + +  ++ + +    +
++++++ +++   + ++ +      
++       + + S+ + +    
++++++ + + + + + +               
+++++++++++++++++++++++""")
+file.close()
 
 my_maze = Maze('maze2.txt')
 my_maze.draw_maze()
