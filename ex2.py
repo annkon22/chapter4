@@ -1,8 +1,5 @@
 def rev_list(lst):
-    if len(lst) == 0:
-        return lst
-    else:
-        return [lst[-1]] + rev_list(lst[:-1])
+    return [lst[-1]] + rev_list(lst[:-1]) if lst else []
 
 
 
