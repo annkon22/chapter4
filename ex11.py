@@ -2,8 +2,8 @@ import module_queue as queue
 import copy as copy
 
 
-def conflicts(left_side, right_side):
-    if left_side[0].size > left_side[1].size():
+def conflicts(side):
+    if side[0].size() > side[1].size():
         return True
     
     
@@ -14,7 +14,7 @@ def move(left_side, right_side):
     test_lst_right.append(test_lst_left[0].pop())
     test_lst_right.append(test_lst_right[1].pop())
 
-    if not conflicts(test_lst_left[0], test_lst_left[1] and not conflicts(test_lst_right[0], test_lst_right[1])):
+    if not conflicts(test_lst_left) and not conflicts(test_lst_right)
         left_side = test_lst_left
         right_side = test_lst_right
 
@@ -47,6 +47,7 @@ my_left.append(my_mis)
 my_right = []
 my_right.append(queue.Queue())
 my_right.append(queue.Queue())
+my_turn = input("Whom you'll take aboard?").split()
 
 print(move(my_left, my_right))
 
